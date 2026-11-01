@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a5a1c"/><stop offset="1" stop-color="#2a1a0c"/></linearGradient></defs>
+<rect width="600" height="900" fill="url(#g)"/><rect x="22" y="22" width="556" height="856" fill="none" stroke="#C5A36A" stroke-width="2"/><rect x="32" y="32" width="536" height="836" fill="none" stroke="#C5A36A" stroke-width=".8" opacity=".6"/>
+<rect x="190" y="170" width="220" height="380" rx="110" fill="#2a120c" stroke="#C5A36A" stroke-width="5"/><circle cx="375" cy="380" r="12" fill="#C5A36A"/><ellipse cx="300" cy="200" rx="100" ry="14" fill="#0e0807"/><path d="M240 200 Q240 120 300 120 Q360 120 360 200Z" fill="#0e0807"/><path d="M250 300 Q300 270 350 300 Q300 320 250 300Z" fill="#0e0807"/>
+<text x="300" y="640" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="58" font-style="italic" fill="#F1E6D2">Мистер Бун</text>
+<text x="300" y="705" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="58" font-style="italic" fill="#F1E6D2">открывает дверь</text>
+<line x1="150" y1="740" x2="450" y2="740" stroke="#C5A36A"/><text x="300" y="780" text-anchor="middle" font-family="Georgia,serif" font-size="20" letter-spacing="6" fill="#C5A36A">КОМЕДИЯ</text>
+<text x="300" y="840" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="8" fill="#C5A36A" opacity=".8">★ STAR CINEMA ★</text></svg>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STAR CINEMA — винтажный арт-кинотеатр</title>
+  <meta name="description" content="STAR CINEMA — винтажный арт-кинотеатр с онлайн-бронированием билетов. Учебное демо.">
+  <meta name="theme-color" content="#171313">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Основная навигация">
+    <a class="brand" href="#/home" aria-label="STAR CINEMA — на главную"><span class="brand__star" aria-hidden="true">★</span> STAR CINEMA</a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#/home" data-nav="home">Главная</a></li>
+      <li><a href="#/movies" data-nav="movies">Фильмы</a></li>
+      <li><a href="#/schedule" data-nav="schedule">Расписание</a></li>
+      <li><a href="#/tickets" data-nav="tickets">Мои билеты</a></li>
+      <li><a class="btn btn--primary btn--sm" href="#/schedule">Забронировать</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ГЛАВНАЯ -->
+  <section class="view" id="view-home">
+    <div class="hero">
+      <img class="hero__bg" src="assets/images/hero.svg" alt="" aria-hidden="true">
+      <div class="hero__content">
+        <p class="eyebrow">★ Арт-кинотеатр · Est. 1957 ★</p>
+        <h1 class="hero__title">STAR <span>CINEMA</span></h1>
+        <p class="hero__slogan">Кино, которое хочется прожить</p>
+        <p class="hero__sub">Возвращаем магию большого экрана</p>
+        <div class="hero__actions"><a class="btn btn--primary" href="#/movies">Выбрать фильм</a><a class="btn btn--ghost" href="#/schedule">Смотреть расписание</a></div>
+      </div>
+    </div>
+
+    <div class="container section">
+      <header class="section-head reveal"><p class="eyebrow">Афиша</p><h2>Сейчас в прокате</h2><div class="ornament" aria-hidden="true">★ ★ ★</div></header>
+      <div class="movie-grid" id="homeMovies"></div>
+    </div>
+
+    <div class="container section about">
+      <div class="about__text reveal"><p class="eyebrow">О кинотеатре</p><h2>Дворец грёз для тех, кто любит кино</h2>
+        <p>STAR CINEMA — это три зала по тридцать шесть кресел, бархатные портьеры, тёплый свет и афиши в духе золотого века Голливуда. Мы показываем драмы, нуары, романтические истории и авторское кино так, как их задумали создатели: на большом экране и в тишине.</p></div>
+      <div class="about__img reveal"><img src="assets/images/interior.svg" alt="Иллюстрация: зрительный зал с бордовыми креслами" loading="lazy"></div>
+    </div>
+
+    <div class="banner"><img src="assets/images/interior.svg" alt="" aria-hidden="true" loading="lazy"><div class="banner__text reveal"><p class="eyebrow">Атмосфера</p><h2>Три зала. Один вечер. Ваше кино.</h2></div></div>
+
+    <div class="container section">
+      <header class="section-head reveal"><p class="eyebrow">Почему мы</p><h2>Преимущества STAR CINEMA</h2></header>
+      <div class="features">
+        <div class="feature reveal"><span class="feature__ico" aria-hidden="true">✦</span><h3>Три категории мест</h3><p>Стандарт, комфорт и VIP — выбирайте кресло по душе и кошельку.</p></div>
+        <div class="feature reveal"><span class="feature__ico" aria-hidden="true">✦</span><h3>Бронь за минуту</h3><p>Интерактивная схема зала и мгновенный расчёт стоимости.</p></div>
+        <div class="feature reveal"><span class="feature__ico" aria-hidden="true">✦</span><h3>Электронный билет</h3><p>Красивый билет, который можно распечатать или показать на экране.</p></div>
+        <div class="feature reveal"><span class="feature__ico" aria-hidden="true">✦</span><h3>Свободная отмена</h3><p>Передумали? Отмените бронь, и места снова станут доступны.</p></div>
+      </div>
+    </div>
+
+    <div class="container section magic reveal"><div class="magic__box"><p class="eyebrow">Магия большого экрана</p>
+      <blockquote>Свет гаснет, занавес поднимается — и целый мир оказывается только вашим.</blockquote>
+      <a class="btn btn--primary" href="#/schedule">Занять места</a></div></div>
+  </section>
+
+  <!-- ФИЛЬМЫ -->
+  <section class="view" id="view-movies" hidden>
+    <div class="container section">
+      <header class="section-head"><p class="eyebrow">Каталог</p><h1>Фильмы</h1><div class="ornament" aria-hidden="true">★ ★ ★</div></header>
+      <div class="filters" role="group" aria-label="Фильтры фильмов">
+        <div class="field"><label for="catGenre">Жанр</label><select id="catGenre"></select></div>
+        <div class="field"><label for="catAge">Возраст</label><select id="catAge"></select></div>
+        <button type="button" class="btn btn--ghost btn--sm js-reset-catalog">Сбросить фильтры</button>
+        <p class="muted filters__count" id="catalogCount" aria-live="polite"></p>
+      </div>
+      <div class="movie-grid" id="catalogGrid"></div>
+      <div class="empty" id="catalogEmpty" hidden><div class="empty__star" aria-hidden="true">★</div><h3>Ничего не найдено</h3><p class="muted">Попробуйте изменить условия поиска.</p><button type="button" class="btn btn--primary js-reset-catalog">Сбросить фильтры</button></div>
+    </div>
+  </section>
+
+  <!-- РАСПИСАНИЕ -->
+  <section class="view" id="view-schedule" hidden>
+    <div class="container section">
+      <header class="section-head"><p class="eyebrow">Афиша на неделю</p><h1>Расписание</h1><div class="ornament" aria-hidden="true">★ ★ ★</div></header>
+      <div class="chips-row" id="dateTabs" role="group" aria-label="Выбор даты"></div>
+      <div class="filters"><div class="field"><label for="scheduleMovie">Фильм</label><select id="scheduleMovie"></select></div></div>
+      <h2 class="sched-title" id="scheduleTitle" aria-live="polite"></h2>
+      <div id="scheduleList"></div>
+    </div>
+  </section>
+
+  <!-- ВЫБОР МЕСТ -->
+  <section class="view" id="view-seats" hidden>
+    <div class="container section">
+      <header class="section-head section-head--left" id="seatsHeader"></header>
+      <div class="filters" role="group" aria-label="Фильтры мест">
+        <div class="field"><label for="filterCat">Категория мест</label><select id="filterCat"></select></div>
+        <div class="field"><label for="filterMax">Максимальная стоимость</label><select id="filterMax"></select></div>
+        <button type="button" class="btn btn--ghost btn--sm" id="resetSeatFilters">Сбросить фильтры</button>
+      </div>
+      <div class="seats-layout">
+        <div class="hall">
+          <h2 class="hall__title" id="hallTitle"></h2>
+          <ul class="legend" aria-label="Обозначения">
+            <li><span class="legend__seat is-free cat-comfort"></span>Свободно</li>
+            <li><span class="legend__seat is-selected"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>Выбрано</li>
+            <li><span class="legend__seat is-occupied"><svg viewBox="0 0 24 24"><path d="M7 10V8a5 5 0 0110 0v2h1v10H6V10zm2 0h6V8a3 3 0 00-6 0z" fill="currentColor"/></svg></span>Занято</li>
+          </ul>
+          <div class="screen" aria-hidden="true"><span>SCREEN</span></div>
+          <div class="hall__scroll"><div class="hall__map" id="hallMap" role="group" aria-label="Схема зала. Стрелки перемещают по местам, Enter или пробел выбирает место"></div></div>
+          <section class="seat-list-wrap" aria-labelledby="seatListTitle">
+            <h3 id="seatListTitle">Список мест (<span id="seatListCount">0</span>)</h3>
+            <ul class="seat-list" id="seatList"></ul>
+          </section>
+        </div>
+        <aside class="order" id="orderCard" aria-label="Заказ"></aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- МОИ БИЛЕТЫ -->
+  <section class="view" id="view-tickets" hidden>
+    <div class="container section">
+      <header class="section-head"><p class="eyebrow">История броней</p><h1>Мои билеты</h1><div class="ornament" aria-hidden="true">★ ★ ★</div></header>
+      <div class="stats" id="ticketStats"></div>
+      <p class="demo-note">Учебное демо: бронирования сохраняются только в этом браузере</p>
+      <div id="ticketList"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div><a class="brand" href="#/home"><span class="brand__star" aria-hidden="true">★</span> STAR CINEMA</a><p class="muted">Винтажный арт-кинотеатр. Кино, которое хочется прожить.</p></div>
+    <nav aria-label="Навигация в подвале"><h2 class="footer__h">Разделы</h2><ul><li><a href="#/home">Главная</a></li><li><a href="#/movies">Фильмы</a></li><li><a href="#/schedule">Расписание</a></li><li><a href="#/tickets">Мои билеты</a></li></ul></nav>
+    <div><h2 class="footer__h">Контакты (демо)</h2><ul class="muted"><li>Адрес: улица Вымышленная, 1</li><li>Телефон: +7 (000) 000-00-00</li><li>Почта: demo@starcinema.example</li></ul></div>
+  </div>
+  <div class="container footer__bottom">
+    <p class="demo-note">Учебное демо: бронирования сохраняются только в этом браузере</p>
+    <p class="muted">© <span id="year"></span> STAR CINEMA · Вымышленный проект · <button type="button" class="link-btn" id="resetDemo">Сбросить демо-данные</button></p>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<dialog id="movieDialog" aria-labelledby="movieDialogTitle"><div class="dialog-box dialog-box--wide"><button type="button" class="dialog-x" data-close aria-label="Закрыть">✕</button><div id="movieDialogBody"></div></div></dialog>
+
+<dialog id="bookDialog" aria-labelledby="bookTitle"><div class="dialog-box">
+  <button type="button" class="dialog-x" data-close aria-label="Закрыть">✕</button>
+  <h2 id="bookTitle">Подтверждение брони</h2>
+  <form id="bookForm" novalidate>
+    <dl class="order-info" id="bookSummary"></dl>
+    <div class="field field--full"><label for="customerName">Ваше имя</label>
+      <input id="customerName" name="name" type="text" autocomplete="given-name" maxlength="60" required aria-describedby="nameError" aria-invalid="false" placeholder="Например, Анна">
+      <p class="form-error" id="nameError" role="alert"></p></div>
+    <p class="form-error" id="bookError" role="alert"></p>
+    <div class="dialog-actions"><button type="button" class="btn btn--ghost" data-close>Назад</button><button type="submit" class="btn btn--primary">Подтвердить бронь</button></div>
+    <p class="demo-note">Учебное демо: оплата не производится</p>
+  </form></div></dialog>
+
+<dialog id="ticketDialog" aria-labelledby="ticketTitle"><div class="dialog-box dialog-box--ticket">
+  <button type="button" class="dialog-x no-print" data-close aria-label="Закрыть">✕</button>
+  <div class="ticket-head no-print" id="ticketHead"></div>
+  <div id="ticketBody"></div>
+  <div class="dialog-actions no-print"><button type="button" class="btn btn--ghost" id="printTicket">Распечатать</button><button type="button" class="btn btn--primary" id="goTickets">Перейти к моим билетам</button></div>
+</div></dialog>
+
+<dialog id="confirmDialog" aria-labelledby="confirmTitle"><div class="dialog-box dialog-box--sm">
+  <h2 id="confirmTitle"></h2><p id="confirmText"></p>
+  <form method="dialog" class="dialog-actions"><button class="btn btn--ghost" id="confirmCancel" value="cancel"></button><button type="button" class="btn btn--danger" id="confirmOk"></button></form>
+</div></dialog>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/seats.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

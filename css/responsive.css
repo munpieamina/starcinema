@@ -1,0 +1,38 @@
+/* STAR CINEMA — адаптивность */
+@media (max-width:1000px){
+  .seats-layout{grid-template-columns:1fr}
+  .order{position:static}
+  .about{grid-template-columns:1fr;gap:1.5rem}
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .nav-toggle{display:flex}
+  .nav__links{position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1rem 1rem;display:none}
+  .nav-open .nav__links{display:flex}
+  .nav__links li{border-bottom:1px solid rgba(197,163,106,.15)}
+  .nav__links a:not(.btn){display:block;padding:.9rem 0}
+  .nav__links li:last-child{border:0;padding-top:.8rem}
+  .nav__links .btn{width:100%}
+}
+@media (max-width:640px){
+  body{font-size:15px}
+  .container{width:calc(100% - 1.5rem)}
+  .hall{padding:.9rem}
+  .sched-row{grid-template-columns:70px 1fr;padding:.9rem;gap:.8rem}.sched-row__poster{width:70px}
+  .session{min-width:calc(50% - .4rem)}
+  .movie-detail{grid-template-columns:1fr}.movie-detail__poster{max-width:200px;margin:auto}
+  .booking{grid-template-columns:70px 1fr}.booking img{width:70px}
+  .booking__actions{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
+  .booking__actions .btn{flex:1 1 auto}
+  .seat-item{grid-template-columns:40px 1fr auto;font-size:.82rem}
+  .seat-item .tag{display:none}.seat-item em{grid-column:3;grid-row:1}
+  .ticket{grid-template-columns:1fr}
+  .ticket__stub{border-left:0;border-top:2px dashed var(--burgundy)}
+  .stamp{left:50%;font-size:1.4rem}
+  .footer__grid{grid-template-columns:1fr}
+  .filters .field{min-width:100%;flex:1}
+  .filters__count{margin-left:0}
+  .dialog-box{padding:1.3rem 1rem}
+  .toasts{left:.75rem;right:.75rem;max-width:none}
+  .btn{min-height:48px}
+}
